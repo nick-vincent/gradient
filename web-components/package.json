@@ -1,7 +1,7 @@
 {
-  "name": "stencil-example",
+  "name": "@gradient/web-components",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Gradient Design System Web Components",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-example/stencil-example.esm.js",
+  "unpkg": "dist/gradient/gradient.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
