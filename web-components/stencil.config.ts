@@ -7,7 +7,6 @@ export const config: Config = {
     react({
       componentCorePackage: '@gradient/web-components',
       proxiesFile: '../react-bindings/src/components/stencil-generated/index.ts',
-      includeDefineCustomElements: true,
     }),
     {
       type: 'dist-hydrate-script',

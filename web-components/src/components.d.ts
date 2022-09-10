@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GradientBanner {
+    }
     interface GradientButton {
     }
 }
@@ -14,6 +16,12 @@ export interface GradientButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLGradientButtonElement;
 }
 declare global {
+    interface HTMLGradientBannerElement extends Components.GradientBanner, HTMLStencilElement {
+    }
+    var HTMLGradientBannerElement: {
+        prototype: HTMLGradientBannerElement;
+        new (): HTMLGradientBannerElement;
+    };
     interface HTMLGradientButtonElement extends Components.GradientButton, HTMLStencilElement {
     }
     var HTMLGradientButtonElement: {
@@ -21,14 +29,18 @@ declare global {
         new (): HTMLGradientButtonElement;
     };
     interface HTMLElementTagNameMap {
+        "gradient-banner": HTMLGradientBannerElement;
         "gradient-button": HTMLGradientButtonElement;
     }
 }
 declare namespace LocalJSX {
+    interface GradientBanner {
+    }
     interface GradientButton {
         "onGradientButtonClick"?: (event: GradientButtonCustomEvent<any>) => void;
     }
     interface IntrinsicElements {
+        "gradient-banner": GradientBanner;
         "gradient-button": GradientButton;
     }
 }
@@ -36,6 +48,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "gradient-banner": LocalJSX.GradientBanner & JSXBase.HTMLAttributes<HTMLGradientBannerElement>;
             "gradient-button": LocalJSX.GradientButton & JSXBase.HTMLAttributes<HTMLGradientButtonElement>;
         }
     }
