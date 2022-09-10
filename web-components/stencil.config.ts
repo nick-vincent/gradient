@@ -10,6 +10,9 @@ export const config: Config = {
       includeDefineCustomElements: true,
     }),
     {
+      type: 'dist-hydrate-script',
+    },
+    {
       type: 'dist',
       esmLoaderPath: '../loader',
     },
