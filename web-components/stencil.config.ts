@@ -28,4 +28,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  hydratedFlag: {
+    selector: 'attribute',
+  },
 };
