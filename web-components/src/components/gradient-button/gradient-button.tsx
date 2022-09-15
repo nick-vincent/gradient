@@ -1,4 +1,4 @@
-import { Component, Host, h, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
   tag: 'gradient-button',
@@ -7,6 +7,8 @@ import { Component, Host, h, Event, EventEmitter } from '@stencil/core';
 })
 export class GradientButton {
   @Event() gradientButtonClick: EventEmitter;
+
+  @Prop({ reflect: true }) readonly color: string = 'blueviolet';
 
   onClick = () => {
     this.gradientButtonClick.emit();
@@ -21,7 +23,7 @@ export class GradientButton {
   render() {
     return (
       <Host>
-        <button type="button" onClick={this.onClick} onMouseMove={e => this.onMouseMove(e)}>
+        <button style={{ '--color': this.color }} type="button" onClick={this.onClick} onMouseMove={e => this.onMouseMove(e)}>
           <span>
             <slot></slot>
           </span>

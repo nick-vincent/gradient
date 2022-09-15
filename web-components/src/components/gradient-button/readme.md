@@ -3,6 +3,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type     | Default        |
+| -------- | --------- | ----------- | -------- | -------------- |
+| `color`  | `color`   |             | `string` | `'blueviolet'` |
+
+
 ## Events
 
 | Event                 | Description | Type               |

@@ -9,6 +9,7 @@ export namespace Components {
     interface GradientBanner {
     }
     interface GradientButton {
+        "color": string;
     }
 }
 export interface GradientButtonCustomEvent<T> extends CustomEvent<T> {
@@ -37,6 +38,7 @@ declare namespace LocalJSX {
     interface GradientBanner {
     }
     interface GradientButton {
+        "color"?: string;
         "onGradientButtonClick"?: (event: GradientButtonCustomEvent<any>) => void;
     }
     interface IntrinsicElements {
